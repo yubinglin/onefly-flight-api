@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: onefly-flight-api
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+# ONEFLY API Configuration
+onefly:
+  api:
+    base-url: http://api.oneflya.com:4055/price
+    cid: test
+    aes-key: UQVKPI5ATFNQQIA5
+
+# SpringDoc / Swagger
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
