@@ -1,0 +1,20 @@
+package com.onefly.flight.dto.request;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Schema(description = "Order details request")
+public class OrderDetailRequest {
+
+    @NotBlank(message = "orderno is required")
+    @Schema(description = "Order number")
+    private String orderno;
+}
